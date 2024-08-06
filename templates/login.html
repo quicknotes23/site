@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <title>Sobre Nós - TudoHon Produtos</title>
+    <link rel="icon" href="static/images/favicon.png">
+    <link rel="stylesheet" href="static/styles/login.css"> <!-- Atualizado para o novo CSS -->
+</head>
+<body>
+    <main class="content">
+        <h2>Login</h2>
+        <form method="POST">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            {% if error %}
+                <p>{{ error }}</p>
+            {% endif %}
+
+            <button type="submit">Entrar</button>
+        </form>
+    </main>
+</body>
+</html>

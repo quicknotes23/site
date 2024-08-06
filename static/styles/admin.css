@@ -1,0 +1,289 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #a5a1a1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+}
+
+/* Estilos para o Cabeçalho */
+.header {
+    background-color: #2a2d3c;
+    color: white;
+    padding: 20px 0;
+    position: relative; /* Necessário para posicionamento absoluto dos elementos internos */
+}
+
+/* Container do cabeçalho */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza a barra de pesquisa */
+    padding: 0 20px; /* Adiciona espaço nas laterais do cabeçalho */
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    position: absolute; /* Posiciona a logo à esquerda */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.logo img {
+    height: 70px; /* Aumenta o tamanho da logo */
+}
+
+/* Estilos para a Barra de Pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 500px;
+    max-width: 100%;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #F9A02D;
+    color: #000000;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #D98B24;
+}
+
+/* Estilos para o Conteúdo Principal */
+.content {
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço disponível */
+}
+
+/* Estilos para o Formulário Admin */
+.admin-form {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    text-align: left;
+}
+
+.admin-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="number"],
+.admin-form input[type="url"],
+.admin-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.admin-form textarea {
+    height: 100px;
+}
+
+.admin-form button {
+    background-color: #0a2799;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.admin-form button:hover {
+    background-color: #083c74;
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    background-color: #1F2B46;
+    padding: 5px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaçamento padrão para desktops */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4000;
+}
+
+/* Rodapé fixo no final da página */
+.footer {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+/* Estilos para a tabela de produtos */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto; /* Permite rolar horizontalmente se o conteúdo exceder a largura da tela */
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.admin-table th {
+    background-color: #0a2799;
+    color: white;
+    font-weight: bold;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para o link do produto */
+.product-link {
+    color: #0a2799;
+    text-decoration: none;
+}
+
+.product-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para as imagens dos produtos */
+.product-image {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 600px) {
+    nav ul li {
+        margin: 0 1px; /* Ajusta o espaçamento entre os links para dispositivos móveis */
+    }
+
+
+    .search-input {
+        width: 100%; /* Faz com que o campo de pesquisa ocupe toda a largura disponível em dispositivos móveis */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center; /* Centraliza a barra de pesquisa e o logo em dispositivos móveis */
+    }
+
+    .logo {
+        margin-top: 20px; /* Espaço acima da logo */
+        position: static; /* Remove o posicionamento absoluto em dispositivos móveis */
+    }
+
+    .logo img {
+        height: 50px; /* Ajuste o tamanho do logo para dispositivos móveis, se necessário */
+    }
+
+    .admin-form {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .admin-form input[type="text"],
+    .admin-form input[type="number"],
+    .admin-form input[type="url"],
+    .admin-form textarea {
+        width: calc(100% - 20px);
+    }
+
+    .admin-table {
+        font-size: 14px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 8px;
+        white-space: nowrap; /* Impede quebra de linha dentro das células da tabela */
+    }
+}

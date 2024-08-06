@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex"/>
+    <meta name="description" content="Administração dos produtos para Fast Links. Adicione e gerencie produtos de forma eficiente.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/favicon.png" type="image/x-icon">
+    <title>FastLinks Produtos - Admin</title>
+    <link rel="stylesheet" href="static/styles/index.css">
+    <link rel="stylesheet" href="static/styles/admin.css">
+</head>
+<body>
+    <!-- Cabeçalho com a Barra de Pesquisa -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/"><img src="static/images/logo.png" alt="Logo Gadgets Guru"></a>
+            </div>
+            <!-- Barra de Pesquisa -->
+            <form class="search-container" method="get" action="/produtos">
+                <input type="text" name="query" placeholder="Pesquisar..." class="search-input">
+                <button class="search-button" type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Barra de navegação -->
+    <nav>
+        <ul>
+            <li><a href="/produtos?query=Fones">Fones</a></li>
+            <li><a href="/produtos?query=Relógios">Relógios</a></li>
+            <li><a href="/produtos?query=Colares">Colares</a></li>
+            <li><a href="/produtos?query=Brincos">Brincos</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="content">
+        <div class="admin-section">
+            <h2>Adicionar Novo Produto</h2>
+            <form class="admin-form" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+
+                <label for="preco">Preço:</label>
+                <input type="text" id="preco" name="preco" required>
+
+                <label for="link">Link:</label>
+                <input type="text" id="link" name="link" required>
+
+                <label for="imagem">URL da Imagem:</label>
+                <input type="text" id="imagem" name="imagem">
+
+                <button type="submit" name="add">Adicionar Produto</button>
+            </form>
+        </div>
+
+        <div class="admin-section">
+            <h2>Atualizar Produto</h2>
+            <form class="admin-form" method="POST">
+                <label for="id">ID do Produto:</label>
+                <input type="text" id="id" name="id" required>
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" name="descricao" required></textarea>
+
+                <label for="preco">Preço:</label>
+                <input type="text" id="preco" name="preco" required>
+
+                <label for="link">Link:</label>
+                <input type="text" id="link" name="link" required>
+
+                <label for="current_image">Imagem Atual (URL):</label>
+                <input type="text" id="current_image" name="current_image">
+
+                <label for="imagem">Nova Imagem (URL):</label>
+                <input type="text" id="imagem" name="imagem">
+
+                <button type="submit" name="update">Atualizar Produto</button>
+            </form>
+        </div>
+
+        <div class="admin-section">
+            <h2>Deletar Produto</h2>
+            <form class="admin-form" method="POST">
+                <label for="id">ID do Produto:</label>
+                <input type="text" id="id" name="id" required>
+
+                <button type="submit" name="delete">Deletar Produto</button>
+            </form>
+        </div>
+
+        <div class="admin-section">
+            <h2>Produtos Cadastrados</h2>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Link</th>
+                        <th>Imagem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for produto in produtos %}
+                    <tr>
+                        <td>{{ produto.id }}</td>
+                        <td>{{ produto.nome }}</td>
+                        <td>R$ {{ produto.preco }}</td>
+                        <td><a href="{{ produto.link }}" target="_blank" class="product-link">Ver Produto</a></td>
+                        <td><img src="{{ produto.imagem }}" alt="Imagem do Produto" class="product-image"></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Rodapé fixo -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Contatos</h3>
+            <a href="https://wa.me/63984422453?text=Olá%20vim%20do%20site%20e%20preciso%20de%20ajuda" target="_blank">WhatsApp</a>
+            <a href="https://github.com/sharktank-tech">Contato Dev</a>
+            <a href="/sobre">Sobre</a>
+            <p>&copy; 2024 FastLinks Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

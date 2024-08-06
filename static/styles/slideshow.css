@@ -1,0 +1,78 @@
+/* Estilos para o slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+.mySlides img {
+    width: 100%;
+    margin: 0;
+    object-fit: cover; /* Mantém o aspecto da imagem */
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+/* Estilos para os botões de navegação */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.prev {
+    left: 0; /* Posiciona o botão anterior à esquerda */
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0; /* Posiciona o botão próximo à direita */
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slides de desktop */
+.desktop-slide {
+    display: block; /* Mostra os slides de desktop por padrão */
+}
+
+/* Slides de celular */
+.mobile-slide {
+    display: none; /* Oculta os slides de celular por padrão */
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 600px) {
+    .desktop-slide {
+        display: none; /* Oculta slides de desktop em dispositivos móveis */
+    }
+
+    .mobile-slide {
+        display: block; /* Mostra slides móveis em dispositivos móveis */
+    }
+}

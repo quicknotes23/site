@@ -1,0 +1,102 @@
+/* login.css */
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9b9797;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+}
+
+main.content {
+    align-content: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+/* Título do Formulário */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilos do Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Mensagem de Erro */
+p {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Botão de Submit */
+button {
+    background-color: #0a2799;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #083c74;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 600px) {
+    main.content {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

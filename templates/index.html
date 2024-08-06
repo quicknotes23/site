@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex"/>
+    <meta name="description" content="Produtos Amazon com os melhores preços, aqui você encontra: celulares, notebooks, computadores, acessórios, games, eletrônicos, roupas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/favicon.png" type="image/x-icon">
+    <title>FastLinks Produtos</title>
+    <link rel="stylesheet" href="static/styles/index.css">
+    <!-- Adicionando CSS para o slideshow -->
+    <link rel="stylesheet" href="static/styles/slideshow.css">
+</head>
+<body>
+    <!-- Cabeçalho com a Barra de Pesquisa -->
+    <header class="header">
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/"><img src="static/images/logo.png" alt="Logo TudoHon"></a>
+            </div>
+            <!-- Barra de Pesquisa -->
+            <form class="search-container" method="get" action="/produtos">
+                <input type="text" name="query" placeholder="Pesquisar..." class="search-input">
+                <button class="search-button" type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Barra de navegação -->
+    <nav>
+        <ul>
+            <li><a href="/produtos?query=Fones">Fones</a></li>
+            <li><a href="/produtos?query=Relógios">Relógios</a></li>
+            <li><a href="/produtos?query=Colares">Colares</a></li>
+            <li><a href="/produtos?query=Brincos">Brincos</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="content">
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <!-- Slides para desktop -->
+            <div class="mySlides fade desktop-slide">
+                <img src="static/images/slides/pc/slide1-im-1.jpg" style="width:100%">
+                <!-- Botão anterior -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <!-- Botão próximo -->
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div class="mySlides fade desktop-slide">
+                <img src="static/images/slides/pc/slide1-im-2.jpg" style="width:100%">
+                <!-- Botão anterior -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <!-- Botão próximo -->
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div class="mySlides fade desktop-slide">
+                <img src="static/images/slides/pc/slide1-im-3.jpg" style="width:100%">
+                <!-- Botão anterior -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <!-- Botão próximo -->
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+               <!-- Slides para celular -->
+                <div class="mySlides fade mobile-slide">
+                    <img src="static/images/slides/ce/teste-1.jpg" style="width:100%">
+                    <!-- Botão anterior -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <!-- Botão próximo -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="mySlides fade mobile-slide">
+                    <img src="static/images/slides/ce/teste-1.jpg" style="width:100%">
+                    <!-- Botão anterior -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <!-- Botão próximo -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div class="mySlides fade mobile-slide">
+                    <img src="static/images/slides/ce/teste-1.jpg" style="width:100%">
+                    <!-- Botão anterior -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <!-- Botão próximo -->
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+        </div>
+    </main>
+
+    <!-- Rodapé fixo -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Contatos</h3>
+            <a href="https://wa.me/63981154698?text=Olá%20vim%20do%20site%20e%20preciso%20de%20ajuda" target="_blank">WhatsApp</a>
+            <a href="https://github.com/sharktank-tech">Contato Dev</a>
+            <a href="/sobre">Sobre</a>
+            <p>&copy; 2024 FastLinks Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para o slideshow -->
+    <script src="static/scripts/slideshow.js"></script>
+</body>
+</html>

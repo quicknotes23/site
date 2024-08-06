@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Produtos Amazon com os melhores preços, aqui você encontra: celulares, notebooks, computadores, acessórios, games, eletrônicos, roupas">
+        <link rel="fav icon" href="static/images/favicon.png">
+        <title>Resultados da Pesquisa - FastLinks</title>
+        <link rel="stylesheet" href="static/styles/produtos.css">
+    </head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="/"><img src="static/images/logo.png" alt="Logo Gadgets Guru"></a>
+            </div>
+            <form class="search-container" method="get" action="/produtos">
+                <input type="text" name="query" value="{{ query }}" placeholder="Pesquisar..." class="search-input">
+                <button class="search-button" type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Barra de navegação -->
+    <nav>
+        <ul>
+            <li><a href="/produtos?query=Fones">Fones</a></li>
+            <li><a href="/produtos?query=Relógios">Relógios</a></li>
+            <li><a href="/produtos?query=Colares">Colares</a></li>
+            <li><a href="/produtos?query=Brincos">Brincos</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>Resultados para "{{ query }}"</h1>
+        <div class="product-list">
+            {% if produtos %}
+                {% for produto in produtos %}
+                    <div class="product">
+                        <a href="{{ produto['link'] }}">
+                            <img src="{{ produto['imagem'] }}" alt="{{ produto['nome'] }}">
+                            <h2>{{ produto['nome'] }}</h2>
+                            <p>{{ produto['descricao'] }}</p>
+                            <div class="label-price">R$<div class="price">{{ produto['preco'] }}</div></div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Nenhum produto encontrado para "{{ query }}"</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Rodapé fixo -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Contatos</h3>
+            <a href="https://wa.me/63981154698?text=Olá%20vim%20do%20site%20e%20preciso%20de%20ajuda" target="_blank">WhatsApp</a>
+            <a href="https://github.com/sharktank-tech">Contato Dev</a>
+            <a href="/sobre">Sobre</a>
+            <p>&copy; 2024 FastLinks Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

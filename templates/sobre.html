@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex"/>
+    <meta name="description" content="Saiba mais sobre Gadgets Guru Produtos, a sua loja online de confiança para eletrônicos e acessórios.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/images/favicon.png" type="image/x-icon">
+    <title>Sobre Nós - FastLinks Produtos</title>
+    <link rel="stylesheet" href="static/styles/sobre.css">
+</head>
+<body>
+    <!-- Cabeçalho com a Barra de Pesquisa -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <a href="/"><img src="static/images/logo.png" alt="Logo Gadgets Guru"></a>
+            </div>
+            <form class="search-container" method="get" action="/produtos">
+                <input type="text" name="query" value="{{ query }}" placeholder="Pesquisar..." class="search-input">
+                <button class="search-button" type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Barra de navegação -->
+    <nav>
+        <ul>
+            <li><a href="/produtos?query=Fones">Fones</a></li>
+            <li><a href="/produtos?query=Relógios">Relógios</a></li>
+            <li><a href="/produtos?query=Colares">Colares</a></li>
+            <li><a href="/produtos?query=Brincos">Brincos</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Conteúdo Principal -->
+    <main class="content">
+        <section class="about">
+            <h1>Sobre Nós</h1>
+            <p>Bem-vindo ao Fast Links Produtos! Somos sua loja online de confiança para uma ampla variedade de eletrônicos, acessórios, roupas e muito mais. Nosso objetivo é oferecer produtos de alta qualidade a preços acessíveis, garantindo sempre a satisfação de nossos clientes.</p>
+            <p>Desde a nossa fundação, temos trabalhado arduamente para construir uma plataforma segura e conveniente, onde você pode encontrar os melhores produtos do mercado. Nossa equipe está sempre à disposição para ajudar e esclarecer qualquer dúvida que você possa ter.</p>
+            <p>Obrigado por escolher Fast Links Produtos. Esperamos que você tenha uma ótima experiência de compra conosco!</p>
+            <h2>Nossa Missão</h2>
+            <p>Oferecer uma experiência de compra online excepcional, com uma ampla seleção de produtos de alta qualidade, preços competitivos e um atendimento ao cliente de excelência.</p>
+            <h2>Contato</h2>
+            <a href="https://github.com/sharktank-tech">GitHub</a> ou envie um e-mail para <a href="mailto:danilocs.projetos@gmail.com">danilocs.projetos@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <!-- Rodapé fixo -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Contatos</h3>
+            <a href="https://wa.me/63981154698?text=Olá%20vim%20do%20site%20e%20preciso%20de%20ajuda" target="_blank">WhatsApp</a>
+            <a href="https://github.com/sharktank-tech">Contato Dev</a>
+            <a href="/sobre">Sobre</a>
+            <p>&copy; 2024 FastLinks Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da viewport */
+}
+
+/* Estilos para o Cabeçalho */
+.header {
+    background-color: #2a2d3c;
+    color: white;
+    padding: 25px 0; /* Reduzido o padding superior e inferior */
+    position: relative; /* Necessário para posicionamento absoluto dos elementos internos */
+}
+
+/* Container do cabeçalho */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza a barra de pesquisa */
+    padding: 0 20px; /* Adiciona espaço nas laterais do cabeçalho */
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    position: absolute; /* Posiciona a logo à esquerda */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+}
+
+.logo img {
+    height: 90px; /* Aumenta o tamanho da logo */
+}
+
+/* Estilos para a Barra de Pesquisa */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 500px;
+    max-width: 100%;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #F9A02D;
+    color: #000000;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #D98B24;
+}
+
+/* Estilos para o Conteúdo Principal */
+.content {
+    padding: 20px;
+    text-align: center;
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço disponível */
+}
+
+.content h1 {
+    color: #c5a402;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a barra de navegação */
+nav {
+    background-color: #1F2B46;
+    padding: 5px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 20px; /* Espaçamento padrão para desktops */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4000;
+    text-decoration: none;
+}
+
+/* Estilos para o slideshow */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+.mySlides img {
+    width: 100%;
+    margin: 0;
+    object-fit: cover; /* Mantém o aspecto da imagem */
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+/* Estilos para os botões de navegação */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Slides de desktop */
+.desktop-slide {
+    display: block; /* Mostra os slides de desktop */
+}
+
+/* Slides de celular */
+.mobile-slide {
+    display: none; /* Oculta os slides de celular por padrão */
+}
+
+/* Rodapé fixo no final da página */
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+/* Media Query para dispositivos móveis */
+@media (max-width: 600px) {
+    .content h1 {
+        font-size: 15px;
+    }
+
+    nav ul li {
+        margin: 0 1px; /* Ajusta o espaçamento entre os links para dispositivos móveis */
+    }
+
+    .search-input {
+        width: 100%; /* Faz com que o campo de pesquisa ocupe toda a largura disponível em dispositivos móveis */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center; /* Centraliza a barra de pesquisa e o logo em dispositivos móveis */
+    }
+
+    .logo {
+        gap: 5px;
+        margin-top: 40px; /* Espaço acima da logo */
+        position: static; /* Remove o posicionamento absoluto em dispositivos móveis */
+        margin-bottom: 1px; /* Espaço abaixo da logo */
+    }
+
+    .logo img {
+        height: 100px; /* Ajuste o tamanho do logo para dispositivos móveis */
+    }
+
+    .footer-content {
+        gap: 1px;
+    }
+
+    .footer-content a {
+        font-size: 12px;
+    }
+
+    .footer-content p {
+        margin-top: 1px;
+        font-size: 14px;
+    }
+
+    .desktop-slide {
+        display: none; /* Oculta slides de desktop em dispositivos móveis */
+    }
+
+    .mobile-slide {
+        display: block; /* Mostra slides móveis em dispositivos móveis */
+    }
+}
