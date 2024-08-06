@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 import logging
 import spacy
-import sqlite3
+from api import info  # Importa a função info do api.py
 from typing import List
 from manage import inserir, atualizar, deletar, tudo
 
@@ -35,7 +35,10 @@ def index():
 @app.route('/sobre')
 def about():
     return render_template("sobre.html")
-  
+
+@app.route('/api')
+def api():
+    return info()  # Chama a função info que retorna JSON
 
 @app.route('/produtos')
 def produtos():
